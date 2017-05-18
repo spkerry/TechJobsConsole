@@ -125,12 +125,12 @@ namespace TechJobsConsole
 
             foreach (Dictionary<string, string> job in someJobs)
             {
-                Console.WriteLine("*****");
+                Console.WriteLine("\n*****");
                 foreach (string y in job.Keys)
                 {
                     Console.WriteLine("{0}: {1}", y, job[y]);
                 }
-                Console.WriteLine("*****\n");
+                Console.WriteLine("*****");
             }
             
 
