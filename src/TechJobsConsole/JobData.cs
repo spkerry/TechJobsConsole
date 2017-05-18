@@ -3,6 +3,7 @@ using System.IO;
 using System.Reflection;
 using System.Text;
 using System;
+using System.Linq;
 
 namespace TechJobsConsole
 {
@@ -52,8 +53,9 @@ namespace TechJobsConsole
             {
                 foreach (string x in job.Keys)
                 {
+
+                    if (job[x].IndexOf(searchTerm, StringComparison.OrdinalIgnoreCase) != -1)
                     
-                    if (job[x].ToUpper().Contains(searchTerm.ToUpper()))
                     {
                         jobs.Add(job);
                     }
