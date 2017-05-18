@@ -55,9 +55,12 @@ namespace TechJobsConsole
                 {
 
                     if (job[x].IndexOf(searchTerm, StringComparison.OrdinalIgnoreCase) != -1)
-                    
                     {
-                        jobs.Add(job);
+                        if (!jobs.Contains(job))
+                        {
+                            jobs.Add(job);
+                        }
+                        
                     }
                 }
             }
@@ -77,7 +80,11 @@ namespace TechJobsConsole
                 
                 if (aValue.IndexOf(value, 0, StringComparison.OrdinalIgnoreCase) != -1)
                 {
-                    jobs.Add(row);
+                    if (!jobs.Contains(row))
+                    {
+                        jobs.Add(row);
+                    }
+                    
                 }
             }
 
